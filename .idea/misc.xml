@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/OKAN/AndroidStudioProjects/ConnectBiSense/app/src/main/res/layout/activity_account.xml" value="1.605263157894737" />
+        <entry key="..\:/Users/OKAN/AndroidStudioProjects/ConnectBiSense/app/src/main/res/layout/activity_add_device.xml" value="1.605263157894737" />
+        <entry key="..\:/Users/OKAN/AndroidStudioProjects/ConnectBiSense/app/src/main/res/layout/activity_after_connect.xml" value="1.605263157894737" />
+        <entry key="..\:/Users/OKAN/AndroidStudioProjects/ConnectBiSense/app/src/main/res/layout/activity_after_login.xml" value="1.605263157894737" />
+        <entry key="..\:/Users/OKAN/AndroidStudioProjects/ConnectBiSense/app/src/main/res/layout/activity_after_login_settings.xml" value="1.605263157894737" />
+        <entry key="..\:/Users/OKAN/AndroidStudioProjects/ConnectBiSense/app/src/main/res/layout/activity_after_scan.xml" value="1.2821428571428573" />
+        <entry key="..\:/Users/OKAN/AndroidStudioProjects/ConnectBiSense/app/src/main/res/layout/activity_before_login.xml" value="1.605263157894737" />
+        <entry key="..\:/Users/OKAN/AndroidStudioProjects/ConnectBiSense/app/src/main/res/layout/activity_bluetooth_turn_on_off.xml" value="1.2638888888888888" />
+        <entry key="..\:/Users/OKAN/AndroidStudioProjects/ConnectBiSense/app/src/main/res/layout/activity_connect.xml" value="1.605263157894737" />
+        <entry key="..\:/Users/OKAN/AndroidStudioProjects/ConnectBiSense/app/src/main/res/layout/activity_connect_settings.xml" value="1.605263157894737" />
+        <entry key="..\:/Users/OKAN/AndroidStudioProjects/ConnectBiSense/app/src/main/res/layout/activity_device_and_account.xml" value="1.605263157894737" />
+        <entry key="..\:/Users/OKAN/AndroidStudioProjects/ConnectBiSense/app/src/main/res/layout/activity_login.xml" value="1.605263157894737" />
+        <entry key="..\:/Users/OKAN/AndroidStudioProjects/ConnectBiSense/app/src/main/res/layout/activity_main.xml" value="1.605263157894737" />
+        <entry key="..\:/Users/OKAN/AndroidStudioProjects/ConnectBiSense/app/src/main/res/layout/activity_sharing_list.xml" value="1.1928571428571428" />
+        <entry key="..\:/Users/OKAN/AndroidStudioProjects/ConnectBiSense/app/src/main/res/layout/activity_thermo_bi_details.xml" value="1.605263157894737" />
+        <entry key="..\:/Users/OKAN/AndroidStudioProjects/ConnectBiSense/app/src/main/res/layout/activity_thermo_bi_reset.xml" value="1.605263157894737" />
+        <entry key="..\:/Users/OKAN/AndroidStudioProjects/ConnectBiSense/app/src/main/res/layout/activity_thermo_bi_share.xml" value="1.605263157894737" />
+        <entry key="..\:/Users/OKAN/AndroidStudioProjects/ConnectBiSense/app/src/main/res/layout/activity_wrong_email_address.xml" value="1.605263157894737" />
+        <entry key="..\:/Users/OKAN/AndroidStudioProjects/ConnectBiSense/app/src/main/res/layout/sharing_list_recycler_row.xml" value="1.605263157894737" />
+        <entry key="..\:/Users/OKAN/AndroidStudioProjects/ConnectBiSense/app/src/main/res/layout/thermobi_scan_recycler_row.xml" value="1.605263157894737" />
+        <entry key="..\:/Users/OKAN/AndroidStudioProjects/WearOSdeneme/app/src/main/res/drawable/logintextbackground.xml" value="1.8678571428571429" />
+        <entry key="..\:/Users/OKAN/AndroidStudioProjects/WearOSdeneme/app/src/main/res/drawable/scan_background.xml" value="0.9035714285714286" />
+        <entry key="..\:/Users/OKAN/AndroidStudioProjects/WearOSdeneme/app/src/main/res/layout/activity_add_device.xml" value="0.75" />
+        <entry key="..\:/Users/OKAN/AndroidStudioProjects/WearOSdeneme/app/src/main/res/layout/activity_after_connect.xml" value="0.7941834451901566" />
+        <entry key="..\:/Users/OKAN/AndroidStudioProjects/WearOSdeneme/app/src/main/res/layout/activity_after_scan.xml" value="1.1" />
+        <entry key="..\:/Users/OKAN/AndroidStudioProjects/WearOSdeneme/app/src/main/res/layout/activity_connect.xml" value="0.9" />
+        <entry key="..\:/Users/OKAN/AndroidStudioProjects/WearOSdeneme/app/src/main/res/layout/activity_connect_settings.xml" value="0.75" />
+        <entry key="..\:/Users/OKAN/AndroidStudioProjects/WearOSdeneme/app/src/main/res/layout/activity_login.xml" value="1.1" />
+        <entry key="..\:/Users/OKAN/AndroidStudioProjects/WearOSdeneme/app/src/main/res/layout/activity_main.xml" value="0.9" />
+        <entry key="..\:/Users/OKAN/AndroidStudioProjects/WearOSdeneme/app/src/main/res/layout/activity_thermo_bi_share.xml" value="0.5" />
+        <entry key="..\:/Users/OKAN/AndroidStudioProjects/WearOSdeneme/app/src/main/res/layout/activity_wrong_email_address.xml" value="0.75" />
+        <entry key="..\:/Users/OKAN/AndroidStudioProjects/WearOSdeneme/app/src/main/res/layout/thermobi_scan_recycler_row.xml" value="0.5592417061611374" />
+        <entry key="..\:/Users/OKAN/AndroidStudioProjects/WearOSdenemeSon/app/src/main/res/drawable/ic_launcher_background.xml" value="1.4714285714285715" />
+        <entry key="..\:/Users/OKAN/AndroidStudioProjects/WearOSdenemeSon/app/src/main/res/layout/activity_account.xml" value="0.9" />
+        <entry key="..\:/Users/OKAN/AndroidStudioProjects/WearOSdenemeSon/app/src/main/res/layout/activity_add_device.xml" value="1.8667763157894737" />
+        <entry key="..\:/Users/OKAN/AndroidStudioProjects/WearOSdenemeSon/app/src/main/res/layout/activity_after_connect.xml" value="0.67" />
+        <entry key="..\:/Users/OKAN/AndroidStudioProjects/WearOSdenemeSon/app/src/main/res/layout/activity_after_login.xml" value="0.67" />
+        <entry key="..\:/Users/OKAN/AndroidStudioProjects/WearOSdenemeSon/app/src/main/res/layout/activity_after_login_settings.xml" value="1.1" />
+        <entry key="..\:/Users/OKAN/AndroidStudioProjects/WearOSdenemeSon/app/src/main/res/layout/activity_after_scan.xml" value="0.9" />
+        <entry key="..\:/Users/OKAN/AndroidStudioProjects/WearOSdenemeSon/app/src/main/res/layout/activity_before_login.xml" value="1.5328947368421053" />
+        <entry key="..\:/Users/OKAN/AndroidStudioProjects/WearOSdenemeSon/app/src/main/res/layout/activity_connect.xml" value="0.75" />
+        <entry key="..\:/Users/OKAN/AndroidStudioProjects/WearOSdenemeSon/app/src/main/res/layout/activity_connect_settings.xml" value="1.575657894736842" />
+        <entry key="..\:/Users/OKAN/AndroidStudioProjects/WearOSdenemeSon/app/src/main/res/layout/activity_device_and_account.xml" value="1.123046875" />
+        <entry key="..\:/Users/OKAN/AndroidStudioProjects/WearOSdenemeSon/app/src/main/res/layout/activity_home2.xml" value="1.4703947368421053" />
+        <entry key="..\:/Users/OKAN/AndroidStudioProjects/WearOSdenemeSon/app/src/main/res/layout/activity_login.xml" value="0.9" />
+        <entry key="..\:/Users/OKAN/AndroidStudioProjects/WearOSdenemeSon/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/OKAN/AndroidStudioProjects/WearOSdenemeSon/app/src/main/res/layout/activity_sharing_list.xml" value="1.1" />
+        <entry key="..\:/Users/OKAN/AndroidStudioProjects/WearOSdenemeSon/app/src/main/res/layout/activity_thermo_bi_details.xml" value="1.1" />
+        <entry key="..\:/Users/OKAN/AndroidStudioProjects/WearOSdenemeSon/app/src/main/res/layout/activity_thermo_bi_reset.xml" value="1.2964285714285715" />
+        <entry key="..\:/Users/OKAN/AndroidStudioProjects/WearOSdenemeSon/app/src/main/res/layout/activity_thermo_bi_share.xml" value="1.25" />
+        <entry key="..\:/Users/OKAN/AndroidStudioProjects/WearOSdenemeSon/app/src/main/res/layout/activity_wrong_email_address.xml" value="1.488486842105263" />
+        <entry key="..\:/Users/OKAN/AndroidStudioProjects/WearOSdenemeSon/app/src/main/res/layout/after_login_recycler_row.xml" value="0.1" />
+        <entry key="..\:/Users/OKAN/AndroidStudioProjects/WearOSdenemeSon/app/src/main/res/layout/sharing_list_recycler_row.xml" value="0.9709443099273608" />
+        <entry key="..\:/Users/OKAN/AndroidStudioProjects/WearOSdenemeSon/app/src/main/res/layout/thermobi_scan_recycler_row.xml" value="1.25" />
+        <entry key="..\:/Users/OKAN/AndroidStudioProjects/WearOSdenemeSon/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="1.05" />
+        <entry key="..\:/Users/OKAN/AndroidStudioProjects/WearOSdenemeSon/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="1.05" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.7941834451901566" />
+      </ProjectState>
+    </option>
+  </component>
+</project>
