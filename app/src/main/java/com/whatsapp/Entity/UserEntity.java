@@ -16,10 +16,14 @@ public class UserEntity {
     @ColumnInfo(name = "accessToken")
     public String accessToken;
 
+    @ColumnInfo(name="refreshToken")
+    public String refreshToken;
 
-    public UserEntity(int userId, String accessToken) {
+
+    public UserEntity(int userId, String accessToken,String refreshToken) {
         this.userId = userId;
         this.accessToken = accessToken;
+        this.refreshToken = refreshToken;
     }
 
 

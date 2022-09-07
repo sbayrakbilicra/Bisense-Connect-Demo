@@ -39,6 +39,22 @@
         android:layout_marginTop="20dp"
         />
 
+    <Button
+        android:id="@+id/connectButtonnn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Bağlan"
+        android:textAllCaps="false"
+        android:background="@drawable/scan_background"
+        android:textColor="#FFFFFF"
+        android:visibility="invisible"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/explanation2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/explanation2" />
+
     <TextView
         android:id="@+id/HomeScreenTextView"
         android:layout_width="wrap_content"

@@ -24,4 +24,7 @@ public interface UserDao {
     @Query("UPDATE user_table SET accessToken= :accessToken")
     void updateAccessToken(String accessToken);
 
+    @Query("UPDATE user_table SET refreshToken=:refreshToken")
+    void updateRefreshToken(String refreshToken);
+
 }

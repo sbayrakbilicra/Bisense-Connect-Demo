@@ -111,7 +111,7 @@ public class LoginActivity extends AppCompatActivity {
                         System.out.println("accessToken: "+accessToken);
                         System.out.println("refreshToken: "+refreshToken);
                         ownerUserId = jsonObject.getJSONObject("result").getInt("userId");
-                        userViewModel.insertUser(new UserEntity(ownerUserId, BeforeLoginActivity.accessToken));
+                        userViewModel.insertUser(new UserEntity(ownerUserId, BeforeLoginActivity.accessToken,refreshToken));
 
                         RefreshAuthenticationModel refreshAuthenticationModel = new RefreshAuthenticationModel(refreshToken,accessToken);
                         bilicraApiViewModel.refreshAuthentication(refreshAuthenticationModel);
@@ -230,107 +230,6 @@ public class LoginActivity extends AppCompatActivity {
 
 
     }
-
-
-
-
-
-    private void userLogin1(){
-
-
-         Call<ResponseBody> loginCall = RetrofitClient.getInstance().getMyApi().userLogin(new AuthenticateModel("okankckse","123456"));
-         loginCall.enqueue(new Callback<ResponseBody>() {
-            @Override
-            public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
-                if(response.code() == 200){
-                    //loginButton.setClickable(false);
-
-                    try {
-                        JSONObject jsonObject = new JSONObject(response.body().string());
-                        System.out.println("Gelen veri : "+jsonObject.getJSONObject("result"));
-                        //System.out.println("AccessToken : "+jsonObject.getJSONObject("result").getString("accessToken"));
-                        BeforeLoginActivity.accessToken = jsonObject.getJSONObject("result").getString("accessToken");
-                        /*AuthenticateResultModel authenticateResultModel = new AuthenticateResultModel();
-                        authenticateResultModel.accessToken = jsonObject.getJSONObject("result").getString("accessToken");
-                        authenticateResultModel.encryptedAccessToken = jsonObject.getJSONObject("result").getString("encryptedAccessToken");
-                        authenticateResultModel.expireInSeconds = jsonObject.getJSONObject("result").getInt("expireInSeconds");
-                        authenticateResultModel.userID = jsonObject.getJSONObject("result").getInt("userId");
-                        authenticateResultModel.refreshToken = jsonObject.getJSONObject("result").getString("refreshToken");*/
-                        ownerUserId = jsonObject.getJSONObject("result").getInt("userId");
-
-                        userViewModel.insertUser(new UserEntity(ownerUserId, BeforeLoginActivity.accessToken));
-
-                        Intent intent = new Intent(LoginActivity.this, AfterLoginActivity.class);
-                        startActivity(intent);
-                        finishAffinity();
-
-                        //deviceGetAll();
-
-                    }catch (IOException | JSONException e){
-                        e.printStackTrace();
-                    }
-                    System.out.println("Kullanıcı Girişi Başarılı");
-
-                }else{
-                    System.out.println("Kullanıcı Girişi Başarısız");
-                    Toast.makeText(getApplicationContext(), "Kullanıcı Adı veya Şifrenizi Tekrar Giriniz", Toast.LENGTH_SHORT).show();
-                    progressBar.setVisibility(View.INVISIBLE);
-                    loginButton.setVisibility(View.VISIBLE);
-
-                }
-            }
-
-            @Override
-            public void onFailure(Call<ResponseBody> call, Throwable t) {
-                System.out.println("fail");
-                Toast.makeText(getApplicationContext(), "İnternet Bağlantınızı Kontrol Ediniz", Toast.LENGTH_SHORT).show();
-                progressBar.setVisibility(View.INVISIBLE);
-                loginButton.setVisibility(View.VISIBLE);
-            }
-        });
-
-
-
-
-    }
-
-
-   /* private void userLogin2(){
-        Call<AuthenticateResultModel> loginCall2 = RetrofitClient.getInstance().getMyApi().userLogin1(new AuthenticateModel(userNameEditText.getText().toString(),passwordEditText.getText().toString()));
-        loginCall2.enqueue(new Callback<AuthenticateResultModel>() {
-            @Override
-            public void onResponse(Call<AuthenticateResultModel> call, Response<AuthenticateResultModel> response) {
-                if(response.code()==200){
-                    System.out.println("Başarılı");
-                    loginButton.setClickable(false);
-                    AuthenticateResultModel authenticateResultModel = new AuthenticateResultModel();
-                    authenticateResultModel.accessToken = response.body().accessToken;
-                    accessToken = response.body().accessToken;
-                    System.out.println("AccessToken: "+accessToken);
-                    authenticateResultModel.userID= response.body().userID;
-                    authenticateResultModel.encryptedAccessToken = response.body().encryptedAccessToken;
-                    authenticateResultModel.expireInSeconds= response.body().expireInSeconds;
-                    Intent intent = new Intent(LoginActivity.this,AddDeviceActivity.class);
-                    //Given below code close all activities that stay behind
-                    finishAffinity();
-                    startActivity(intent);
-                }else{
-                    System.out.println("Kullanıcı Girişi Başarısız");
-                    loginButton.setClickable(true);
-                }
-            }
-
-            @Override
-            public void onFailure(Call<AuthenticateResultModel> call, Throwable t) {
-                System.out.println("Fail");
-                loginButton.setClickable(true);
-                t.printStackTrace();
-            }
-        });
-    }*/
-
-
-
 
 
 

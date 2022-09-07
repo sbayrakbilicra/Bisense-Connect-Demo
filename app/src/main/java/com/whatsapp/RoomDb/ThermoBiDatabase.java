@@ -11,7 +11,7 @@ import com.whatsapp.Dao.UserDao;
 import com.whatsapp.Entity.ThermoBiEntity;
 import com.whatsapp.Entity.UserEntity;
 
-@Database(entities = {ThermoBiEntity.class, UserEntity.class},version = 5)
+@Database(entities = {ThermoBiEntity.class, UserEntity.class},version = 6)
 public abstract class ThermoBiDatabase extends RoomDatabase {
 
     private static ThermoBiDatabase instance;

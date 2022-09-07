@@ -38,4 +38,8 @@ public class UserViewModel extends AndroidViewModel {
         userRepository.updateAccessToken(userEntity);
     }
 
+    public void updateRefreshToken(UserEntity userEntity){
+        userRepository.updateRefreshToken(userEntity);
+    }
+
 }

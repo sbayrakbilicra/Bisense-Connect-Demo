@@ -34,7 +34,6 @@ public class BluetoothTurnOnOffActivity extends AppCompatActivity {
 
         if(!bluetoothAdapter.isEnabled()){
             activityBluetoothTurnOnOffBinding.button.setVisibility(View.VISIBLE);
-            activityBluetoothTurnOnOffBinding.bluetoothTurnOnTextView.setVisibility(View.VISIBLE);
             activityBluetoothTurnOnOffBinding.button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -49,16 +48,16 @@ public class BluetoothTurnOnOffActivity extends AppCompatActivity {
         }else if(bluetoothAdapter.isEnabled()){
             activityBluetoothTurnOnOffBinding.button.setVisibility(View.INVISIBLE);
             activityBluetoothTurnOnOffBinding.button2.setVisibility(View.VISIBLE);
-            activityBluetoothTurnOnOffBinding.bluetoothTurnOffOnTextView.setVisibility(View.VISIBLE);
             activityBluetoothTurnOnOffBinding.button2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     System.out.println("BLE turn off clicked");
                     bluetoothAdapter.disable();
                     activityBluetoothTurnOnOffBinding.button2.setVisibility(View.INVISIBLE);
-                    activityBluetoothTurnOnOffBinding.button.setVisibility(View.VISIBLE);
+                    activityBluetoothTurnOnOffBinding.progresBarBluetooth.setVisibility(View.VISIBLE);
+                    //activityBluetoothTurnOnOffBinding.button.setVisibility(View.VISIBLE);
 
-                    activityBluetoothTurnOnOffBinding.button.setOnClickListener(new View.OnClickListener() {
+                    /*activityBluetoothTurnOnOffBinding.button.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
                             System.out.println("BLE turn on clicked");
@@ -66,7 +65,7 @@ public class BluetoothTurnOnOffActivity extends AppCompatActivity {
                             activityBluetoothTurnOnOffBinding.progresBarBluetooth.setVisibility(View.VISIBLE);
                             bluetoothAdapter.enable();
                         }
-                    });
+                    });*/
                 }
             });
         }
@@ -86,6 +85,7 @@ public class BluetoothTurnOnOffActivity extends AppCompatActivity {
                 switch(state) {
                     case BluetoothAdapter.STATE_OFF:
                         System.out.println("STATE_OFF");
+                        bluetoothAdapter.enable();
                         break;
                     case BluetoothAdapter.STATE_ON:
                         System.out.println("STATE_ON");

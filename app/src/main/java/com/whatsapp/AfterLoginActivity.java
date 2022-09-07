@@ -15,6 +15,8 @@ import android.os.CountDownTimer;
 import android.os.Handler;
 import android.os.IBinder;
 import android.view.View;
+import android.widget.Toast;
+
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.Observer;
@@ -223,6 +225,37 @@ public class AfterLoginActivity extends AppCompatActivity {
     };
 
 
+    private BluetoothAdapter.LeScanCallback scanCallback1= new BluetoothAdapter.LeScanCallback() {
+        @Override
+        public void onLeScan(BluetoothDevice device, int rssi, byte[] scanRecord) {
+            System.out.println("Device : "+device.getAddress()+" "+device.getName());
+            if(device.getName()!=null ){
+                if(device.getName().equals("ThermoBi")){
+                    //activityAfterLoginBinding.explanation2.setVisibility(View.VISIBLE);
+                    //activityAfterLoginBinding.explanation2.setText("Cihazınızın Açık Olduğundan Emin Olun");
+                    if(address!=null){
+                        if(device.getAddress().equals(address)){
+                            //if(AfterScanActivity.counter!=1){
+                                System.out.println("Device : "+device.getAddress()+" "+device.getName());
+                                //activityAfterLoginBinding.explanation2.setVisibility(View.INVISIBLE);
+
+                                activityAfterLoginBinding.explanation2.setText("Cihaza Bağlantı İsteği Yollandı");
+                                bluetoothLeService.connect(address);
+                                //cihazı bulup 1 kere connect isteği atana kadar bluetooth taramasını kapatmıyoruz.
+                                //cihaz bulup connect isteği attığında ise bluetooth taramasını kapatıyoruz.
+                                bluetoothAdapter.stopLeScan(scanCallback1);
+                            //}
+                        }
+                    }
+                }
+
+            }
+        }
+
+    };
+
+
+
     private final BroadcastReceiver gattUpdateReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
@@ -307,7 +340,24 @@ public class AfterLoginActivity extends AppCompatActivity {
                     /*activityAfterLoginBinding.textView7.setVisibility(View.INVISIBLE);
                     activityAfterLoginBinding.progressBarAfterLogin.setVisibility(View.VISIBLE);*/
                 }
-                //bluetoothAdapter.startLeScan(scanCallback);
+                //Burada kaldın!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                try {
+                    BluetoothLeService.globalBluetoothGatt.disconnect();
+                    BluetoothLeService.globalBluetoothGatt.close();
+                    activityAfterLoginBinding.connectButtonnn.setVisibility(View.VISIBLE);
+                    activityAfterLoginBinding.connectButtonnn.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            activityAfterLoginBinding.connectButtonnn.setVisibility(View.INVISIBLE);
+                            Toast.makeText(AfterLoginActivity.this,"Cihazınızın Açık Olduğundan Emin Olun",Toast.LENGTH_LONG).show();
+                            bluetoothAdapter.startLeScan(scanCallback1);
+                        }
+                    });
+
+                }catch (Exception e){
+                    e.printStackTrace();
+                }
+
 
             }else if(BluetoothLeService.ACTION_GATT_SERVICES_DISCOVERED.equals(action)){
                 System.out.println("AfterLoginActivity ACTION_GATT_SERVICES_DISCOVERED");

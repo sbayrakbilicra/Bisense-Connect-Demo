@@ -432,7 +432,7 @@ public class BluetoothLeService extends Service {
         }
 
         final BluetoothDevice device = bluetoothAdapter.getRemoteDevice(address);
-        device.connectGatt(getApplicationContext(),true,gattCallback);
+        device.connectGatt(getApplicationContext(),false,gattCallback);
 
         broadcastUpdate(ACTION_GATT_CONNECT_REQUEST_SEND);
         return true;

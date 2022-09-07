@@ -37,6 +37,10 @@ public class UserRepository {
         new UpdateAccessTokenAsyncTask(userDao).execute(userEntity);
   }
 
+  public void updateRefreshToken(UserEntity userEntity){
+        new UpdateRefreshTokenAsyncTask(userDao).execute(userEntity);
+  }
+
    private static class InsertUserAsyncTask extends AsyncTask<UserEntity,Void,Void> {
         private UserDao userDao;
         private InsertUserAsyncTask(UserDao userDao){
@@ -77,6 +81,22 @@ public class UserRepository {
         protected Void doInBackground(UserEntity... userEntities) {
             UserEntity userEntity = userEntities[0];
             userDao.updateAccessToken(userEntity.accessToken);
+            return null;
+        }
+    }
+
+
+    private static class UpdateRefreshTokenAsyncTask extends AsyncTask<UserEntity,Void,Void>{
+        private UserDao userDao;
+
+        private UpdateRefreshTokenAsyncTask(UserDao userDao){
+            this.userDao = userDao;
+        }
+
+        @Override
+        protected Void doInBackground(UserEntity... userEntities) {
+            UserEntity userEntity = userEntities[0];
+            userDao.updateRefreshToken(userEntity.refreshToken);
             return null;
         }
     }

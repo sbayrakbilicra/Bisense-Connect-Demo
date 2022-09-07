@@ -51,7 +51,6 @@ public class BilicraApiRepository {
          return createNewUserLiveData;
     }
 
-
     public MutableLiveData<ResponseBody> getCreateDeviceObserver(){
         return createNewDeviceLiveData;
     }
@@ -96,9 +95,6 @@ public class BilicraApiRepository {
         return refreshAuthenticationLiveData;
     }
 
-
-
-
     public void createNewUser(AuthenticateModel authenticateModel){
         Call<ResponseBody> userLogin1 = RetrofitClient.getInstance().getMyApi().userLogin(authenticateModel);
         userLogin1.enqueue(new Callback<ResponseBody>() {
@@ -107,7 +103,8 @@ public class BilicraApiRepository {
 
                 if(response.isSuccessful()){
                     createNewUserLiveData.postValue(response.body());
-                } else{
+                } else if(response.code()==401){
+
                     createNewUserLiveData.postValue(null);
                 }
 
@@ -128,7 +125,7 @@ public class BilicraApiRepository {
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
                 if(response.isSuccessful()){
                     createNewDeviceLiveData.postValue(response.body());
-                }else{
+                }else if(response.code()==401){
                     createNewDeviceLiveData.postValue(null);
                 }
             }
@@ -244,6 +241,7 @@ public class BilicraApiRepository {
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
                 if(response.isSuccessful()){
                     deleteUserGroupLiveData.postValue(response.body());
+
                 }else{
                     deleteUserGroupLiveData.postValue(null);
                 }
